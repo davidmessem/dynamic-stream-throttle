@@ -1,0 +1,27 @@
+{
+  "name": "dynamic-stream-throttle",
+  "version": "1.0.0",
+  "description": "Dynamically limit the speed of a Node stream ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmessem/dynamic-stream-throttle.git"
+  },
+  "keywords": [
+    "node",
+    "stream",
+    "throttle"
+  ],
+  "author": "David Messem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidmessem/dynamic-stream-throttle/issues"
+  },
+  "homepage": "https://github.com/davidmessem/dynamic-stream-throttle#readme",
+  "dependencies": {
+    "limiter": "^1.1.5"
+  }
+}
