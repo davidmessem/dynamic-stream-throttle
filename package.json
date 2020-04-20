@@ -1,6 +1,6 @@
 {
   "name": "dynamic-stream-throttle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamically limit the speed of a Node stream ",
   "main": "index.js",
   "scripts": {

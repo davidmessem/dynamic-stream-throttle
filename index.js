@@ -5,7 +5,7 @@ module.exports = {
   /*
     Docs here
   */
-  getThrottledStream: function getThrottledStream(options) {
+  getThrottledStream: function (options) {
     function throwErrorIfInvalid(options) {
       const optionsProvided = !!options;
       const rateValid = options.rate && typeof options.rate === "number" && options.rate > 0;
