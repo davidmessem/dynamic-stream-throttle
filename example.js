@@ -1,11 +1,4 @@
-# Dynamic Stream Throttle
-
-Dynamically limit the speed of a Node stream
-Adapted from [node-stream-throttle](https://github.com/tjgq/node-stream-throttle)
-
-## Example
-```javascript
-const Throttle = require("dynamic-stream-throttle");
+const Throttle = require("./index");
 const { Readable } = require("stream");
 
 // create simple readable stream
@@ -25,4 +18,3 @@ readableStream.pipe(throttledStream).pipe(process.stdout);
 setTimeout(() => {
   throttledStream.updateThrottleOptions({ rateBytes: 10 });
 }, 10 * 1000);
-```
