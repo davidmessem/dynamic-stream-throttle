@@ -1,6 +1,7 @@
 # Dynamic Stream Throttle
 
 Dynamically limit the speed of a Node stream
+
 Adapted from [node-stream-throttle](https://github.com/tjgq/node-stream-throttle)
 
 ## Example
