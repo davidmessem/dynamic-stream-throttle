@@ -1,8 +1,17 @@
 # Dynamic Stream Throttle
 
-Dynamically limit the speed of a Node stream
-
+Dynamically limit the speed of a Node stream\
 Adapted from [node-stream-throttle](https://github.com/tjgq/node-stream-throttle)
+
+## Usage
+Installation `npm i dynamic-stream-throttle`
+
+`getThrottledStream` takes an object with rate parameters and returns a modified `stream.Transform` object   
+The returned `Transform` has an `updateThrottleOptions` function to change the rate of throttling.
+    
+Throttle rate parameters
+  - `rateBytes` throttle the stream speed to a number of bytes per second
+  - `chunkSizeBytes` control the chunk size that is processed by the stream at each read
 
 ## Example
 ```javascript
