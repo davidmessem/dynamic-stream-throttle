@@ -25,14 +25,16 @@ const readableStream = new Readable({
   },
 });
 
+var bytesPerSecond = 1;
+
 //create a stream which throttles output to 1 byte per second
-const throttledStream = Throttle.getThrottledStream({ rateBytes: 1 });
+const throttledStream = Throttle.getThrottledStream({ rateBytes: bytesPerSecond });
 
 //pipe readableStream to throttledStream, then stdout
 readableStream.pipe(throttledStream).pipe(process.stdout);
 
-//increase rate after 10 seconds
-setTimeout(() => {
-  throttledStream.updateThrottleOptions({ rateBytes: 10 });
-}, 10 * 1000);
+//increase rate every 5 seconds
+setInterval(() => {
+  throttledStream.updateThrottleOptions({ rateBytes: (bytesPerSecond *= 10) });
+}, 5 * 1000);
 ```
